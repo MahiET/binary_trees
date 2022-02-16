@@ -1,7 +1,7 @@
 # 0x1D. C - Binary trees
 
-=Read or watch
-
+Read or watch
+=
 .    Binary tree (note the first line: Not to be confused with B-tree.)
 
 .    Data Structure and Algorithms - Tree
@@ -18,14 +18,18 @@
   =
   
 
-  /**
-	* struct binary_tree_s - Binary tree node
- 	*
- 	* @n: Integer stored in the node
- 	* @parent: Pointer to the parent node
- 	* @left: Pointer to the left child node
- 	* @right: Pointer to the right child node
- 	*/
+	/**
+		* struct binary_tree_s - Binary tree node
+ 		*
+		* @n: Integer stored in the node
+ 		*
+		* @parent: Pointer to the parent node
+ 		*
+		* @left: Pointer to the left child node
+ 		*
+		* @right: Pointer to the right child node
+ 		*
+		*/
 	
 	struct binary_tree_s
 	{
