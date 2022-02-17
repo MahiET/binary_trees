@@ -2,8 +2,8 @@
 
 /**
  * binary_tree_insert_right - function that creates a binary tree node
- * @parent: pointer to the parent node of the node to create
- * @value: value to put in the new node
+ * @parent: pointer to the parent node insert the right-child
+ * @value: value to store in the new node
  * Return: pointer to the new node, or NULL on failure
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
