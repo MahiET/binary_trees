@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_postorder - function that creates a binary tree node
- * @tree: pointer to the parent node of the node to create
- * @func: pointer of function
- * Return: pointer to the new node, or NULL on failure
+ * binary_tree_postorder - traverses a tree in post-order calling func
+ * @tree: const pointer to root node to begin traversal at
+ * @func: pointer to a function to call for each node.
+ * Return: Nothing.
  */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
