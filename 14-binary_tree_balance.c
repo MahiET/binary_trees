@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "binary_trees.h"
 
 /**
@@ -9,36 +8,34 @@
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int left, right, count;
+	int left, right;
 
 	if (tree == NULL)
 		return (0);
-	if (tree->left == NULL && tree->right == NULL)
-		return (0);
-	left = aux_tree_height(tree->left);
-	right = aux_tree_height(tree->right);
+	
+	left = tree->left ? binary_tree_height(tree->left)+ 1 : 0;
+ 	right = tree->right ? binary_tree_height(tree->right) + 1 : 0;
 
-	count = left - right;
-	return (count);
+	return = (left - right);
 }
 
 /**
- * aux_tree_height - height of binary tree
+ * binary_tree_height - height of binary tree
  * @tree: pointer to the root node of the tree
  * Return: height
  */
 
-size_t aux_tree_height(const binary_tree_t *tree)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-	int height_left, height_right;
+  size_t left, right;
 
-	if (tree == NULL)
+	if (tree == NULL || (tree->left == NULL && tree->right == NULL))
 		return (0);
-	height_left = aux_tree_height(tree->left) + 1;
-	height_right = aux_tree_height(tree->right) + 1;
+	left = binary_tree_height(tree->left) + 1;
+	right = binary_tree_height(tree->right) + 1;
 
-	if (height_left > height_right)
-		return (height_left);
+	if (left > right)
+		return (left);
 	else
-		return (height_right);
+		return (right);
 }
